@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+
+  <url>
+    <loc>https://whitecornerboxing.in/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://whitecornerboxing.in/wp-content/uploads/2025/02/freepik-gradient-professional-boxing-championship-rectangle-banner-20250226145944DFGk.png</image:loc>
+      <image:title>White Corner Boxing Academy — Bengaluru</image:title>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://i.vimeocdn.com/video/2053976093-31ae5724795749b52fbb8e5fc0b7d45855b18ba543079f6d1f8cdce27292eab3-d_1280x720</video:thumbnail_loc>
+      <video:title>Best Boxing Gym In Bangalore — White Corner Boxing Academy</video:title>
+      <video:description>Inside White Corner Boxing Academy, Bengaluru — coaching, sparring and conditioning.</video:description>
+      <video:player_loc>https://player.vimeo.com/video/1114922218</video:player_loc>
+      <video:duration>24</video:duration>
+      <video:publication_date>2025-09-01T12:17:29+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+
+  <url><loc>https://whitecornerboxing.in/about/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://whitecornerboxing.in/services-programs/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://whitecornerboxing.in/events/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://whitecornerboxing.in/gallery/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://whitecornerboxing.in/contact-us/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://whitecornerboxing.in/blog/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+
+</urlset>

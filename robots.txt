@@ -1,0 +1,25 @@
+User-agent: *
+Allow: /
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php
+Disallow: /wp-content/uploads/wpforms/
+
+# AI crawlers — allowed on purpose. 43% of local searches now trigger
+# AI Overviews, and these are the agents that read the FAQ + LocalBusiness
+# schema. Blocking them removes the academy from AI answers.
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://whitecornerboxing.in/sitemap.xml
