@@ -32,6 +32,42 @@ collections:
       - { name: order, label: "Order on the page (1 = first)", widget: number, default: 99, value_type: int }
       - { name: body, label: "Article", widget: markdown }
 
+  - name: homepage
+    label: "Homepage — Hero & Timings"
+    description: "The big headline text on the two video corners, and the session timings line."
+    files:
+      - name: homepage
+        label: "Hero & timings"
+        file: "src/_data/site.json"
+        fields:
+          - label: "Session timings"
+            name: hours
+            widget: object
+            fields:
+              - { name: morning, label: "Morning hours", widget: string }
+              - { name: evening, label: "Evening hours", widget: string }
+              - { name: kidsNote, label: "Kids-only note", widget: string }
+          - label: "Hero — Red Corner"
+            name: hero
+            widget: object
+            fields:
+              - label: "Red corner"
+                name: red
+                widget: object
+                fields:
+                  - { name: l1, label: "Headline line 1", widget: string }
+                  - { name: l2, label: "Headline line 2", widget: string }
+                  - { name: badge, label: "Small badge text", widget: string }
+                  - { name: sub, label: "Paragraph (use <b>text</b> for bold)", widget: text }
+              - label: "Blue corner"
+                name: blue
+                widget: object
+                fields:
+                  - { name: l1, label: "Headline line 1", widget: string }
+                  - { name: l2, label: "Headline line 2", widget: string }
+                  - { name: badge, label: "Small badge text", widget: string }
+                  - { name: sub, label: "Paragraph (use <b>text</b> for bold)", widget: text }
+
   - name: contact
     label: "Contact & Register Link"
     description: "Your phone, email and Register-Now form link. Changing these updates them everywhere on the site."
