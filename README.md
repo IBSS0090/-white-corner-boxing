@@ -12,6 +12,17 @@ site with a built-in editing dashboard so the content can be changed without any
 | **This code (GitHub)** | https://github.com/IBSS0090/-white-corner-boxing |
 | **Hosting (Netlify)** | https://app.netlify.com |
 
+## 📄 Guides in this repo
+- **[GOING-LIVE.md](GOING-LIVE.md)** — how to put this site on the real `whitecornerboxing.in` domain.
+
+## 🔎 How to find this repository again (in the future)
+1. Go to **github.com** and sign in (username **IBSS0090**).
+2. Click your **profile picture** (top-right) → **Your repositories**.
+3. Click **`-white-corner-boxing`**.
+   *(Or just open the direct link: https://github.com/IBSS0090/-white-corner-boxing )*
+
+To edit the website, go to **https://white-corner-boxing.netlify.app/admin** and log in with GitHub.
+
 ## ✏️ How to edit the website (no code)
 
 1. Go to **/admin** on the live site.
