@@ -38,7 +38,7 @@ collections:
     files:
       - name: homepage
         label: "Hero & timings"
-        file: "src/_data/site.json"
+        file: "src/_data/homepage.json"
         fields:
           - label: "Session timings"
             name: hours

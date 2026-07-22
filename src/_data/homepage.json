@@ -1,0 +1,21 @@
+{
+  "hours": {
+    "morning": "6:00 – 10:00 AM",
+    "evening": "5:00 – 10:00 PM",
+    "kidsNote": "5:00 PM · 7 days"
+  },
+  "hero": {
+    "red": {
+      "l1": "White Corner",
+      "l2": "Boxing.",
+      "badge": "Red Corner · The Reel",
+      "sub": "Welcome to White Corner Boxing Academy, <b>where champions are made</b>. Expert coaching, professional training, and state-of-the-art facilities across <b>HSR Layout</b>, <b>Koramangala</b> and <b>Indiranagar</b>."
+    },
+    "blue": {
+      "l1": "Real Boxing,",
+      "l2": "Real Results.",
+      "badge": "Blue Corner · The Film",
+      "sub": "Bangalore's number one boxing academy. Where <b>strength meets skill</b>, and every punch brings you closer to your best self. Proudly affiliated with the <b>Karnataka Amateur Boxing Association</b>."
+    }
+  }
+}

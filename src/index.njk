@@ -1648,15 +1648,15 @@ window.WCB_DETAILS = {
   <div class="hero-in">
     <div class="hero-badge">
       <span class="live-dot"></span>
-      <span id="cornerBadge">{{ site.hero.red.badge }}</span>
+      <span id="cornerBadge">{{ homepage.hero.red.badge }}</span>
     </div>
 
     <h1>
-      <span class="l1 glitch" data-t="{{ site.hero.red.l1 }}" id="g1">{{ site.hero.red.l1 }}</span>
-      <span class="l2 glitch" data-t="{{ site.hero.red.l2 }}" id="g2">{{ site.hero.red.l2 }}</span>
+      <span class="l1 glitch" data-t="{{ homepage.hero.red.l1 }}" id="g1">{{ homepage.hero.red.l1 }}</span>
+      <span class="l2 glitch" data-t="{{ homepage.hero.red.l2 }}" id="g2">{{ homepage.hero.red.l2 }}</span>
     </h1>
 
-    <p class="hero-sub" id="heroSub">{{ site.hero.red.sub | safe }}</p>
+    <p class="hero-sub" id="heroSub">{{ homepage.hero.red.sub | safe }}</p>
 
     <div class="hero-btns">
       <a href="#register" class="btn btn-red"><span>Claim Your Free Trial</span></a>
@@ -2054,11 +2054,11 @@ window.WCB_DETAILS = {
     <div class="hours-line rv">
       <span class="hl-tag">Session Timings</span>
       <span class="hl-dot">·</span>
-      <span class="hl-item"><b>Morning</b> {{ site.hours.morning }}</span>
+      <span class="hl-item"><b>Morning</b> {{ homepage.hours.morning }}</span>
       <span class="hl-dot">·</span>
-      <span class="hl-item"><b>Evening</b> {{ site.hours.evening }}</span>
+      <span class="hl-item"><b>Evening</b> {{ homepage.hours.evening }}</span>
       <span class="hl-dot">·</span>
-      <span class="hl-item"><b>Kids-only</b> {{ site.hours.kidsNote }}</span>
+      <span class="hl-item"><b>Kids-only</b> {{ homepage.hours.kidsNote }}</span>
     </div>
   </div>
 
@@ -3009,14 +3009,14 @@ const Corner = (function(){
 
   const COPY = {
     red:{
-      l1:{{ site.hero.red.l1 | dump | safe }}, l2:{{ site.hero.red.l2 | dump | safe }},
-      badge:{{ site.hero.red.badge | dump | safe }},
-      sub:{{ site.hero.red.sub | dump | safe }}
+      l1:{{ homepage.hero.red.l1 | dump | safe }}, l2:{{ homepage.hero.red.l2 | dump | safe }},
+      badge:{{ homepage.hero.red.badge | dump | safe }},
+      sub:{{ homepage.hero.red.sub | dump | safe }}
     },
     blue:{
-      l1:{{ site.hero.blue.l1 | dump | safe }}, l2:{{ site.hero.blue.l2 | dump | safe }},
-      badge:{{ site.hero.blue.badge | dump | safe }},
-      sub:{{ site.hero.blue.sub | dump | safe }}
+      l1:{{ homepage.hero.blue.l1 | dump | safe }}, l2:{{ homepage.hero.blue.l2 | dump | safe }},
+      badge:{{ homepage.hero.blue.badge | dump | safe }},
+      sub:{{ homepage.hero.blue.sub | dump | safe }}
     }
   };
 
