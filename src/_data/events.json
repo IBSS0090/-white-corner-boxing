@@ -1,0 +1,6 @@
+{
+  "events": [
+    { "kind": "Amateur Series", "icon": "🏆", "title": "Box & Burn Series", "desc": "India's first amateur boxing tournament run <b>series-wise with championship belts</b>. Multiple editions already conducted — grassroots fighters earning their stripes in the ring.", "status": "Box & Burn 3 announced" },
+    { "kind": "Professional Stage", "icon": "🥇", "title": "Ring Side Series", "desc": "White Corner's <b>professional boxing stage</b>. Two tournaments already in the books — the platform where our fighters step up to the pro ranks.", "status": "Ring Side Series 3 announced" }
+  ]
+}

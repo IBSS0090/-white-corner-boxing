@@ -117,6 +117,79 @@ collections:
               - { name: lat, label: "Map latitude", widget: number, value_type: float }
               - { name: lng, label: "Map longitude", widget: number, value_type: float }
 
+  - name: programs
+    label: "Training Programs"
+    files:
+      - name: programs
+        label: "Programs"
+        file: "src/_data/programs.json"
+        fields:
+          - name: programs
+            label: "Programs"
+            label_singular: "Program"
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { name: num, label: "Number (01, 02 ...)", widget: string }
+              - { name: icon, label: "Icon (emoji)", widget: string }
+              - { name: title, label: "Program name", widget: string }
+              - { name: tagline, label: "Tagline", widget: string }
+              - name: points
+                label: "Bullet points"
+                widget: list
+                field: { name: point, label: "Point", widget: string }
+
+  - name: coaches
+    label: "Coaches Roster"
+    files:
+      - name: coaches
+        label: "Roster"
+        file: "src/_data/coaches.json"
+        fields:
+          - name: roster
+            label: "Coaches"
+            label_singular: "Coach"
+            widget: list
+            summary: "{{fields.name}}"
+            fields:
+              - { name: name, label: "Name", widget: string }
+              - { name: role, label: "Role (e.g. Coach)", widget: string }
+
+  - name: events
+    label: "Events"
+    files:
+      - name: events
+        label: "Event series"
+        file: "src/_data/events.json"
+        fields:
+          - name: events
+            label: "Events"
+            label_singular: "Event"
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { name: kind, label: "Kind (e.g. Amateur Series)", widget: string }
+              - { name: icon, label: "Icon (emoji)", widget: string }
+              - { name: title, label: "Title", widget: string }
+              - { name: desc, label: "Description (use <b>text</b> for bold)", widget: text }
+              - { name: status, label: "Status line (e.g. Series 3 announced)", widget: string }
+
+  - name: testimonials
+    label: "Testimonials"
+    files:
+      - name: testimonials
+        label: "Reviews"
+        file: "src/_data/testimonials.json"
+        fields:
+          - name: reviews
+            label: "Reviews"
+            label_singular: "Review"
+            widget: list
+            summary: "{{fields.name}}"
+            fields:
+              - { name: name, label: "Member name", widget: string }
+              - { name: text, label: "Review", widget: text }
+
   - name: contact
     label: "Contact & Register Link"
     description: "Your phone, email and Register-Now form link. Changing these updates them everywhere on the site."

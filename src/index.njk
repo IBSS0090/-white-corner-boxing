@@ -1758,101 +1758,19 @@ window.WCB_DETAILS = {
     </div>
 
     <div class="prog-grid">
+{%- for p in programs.programs %}
       <article class="card rv tilt">
-        <div class="card-no">01</div>
-        <div class="card-ico">🥊</div>
-        <h3>Open Sparring</h3>
-        <div class="tl">Open Sparring, Limitless Growth</div>
+        <div class="card-no">{{ p.num }}</div>
+        <div class="card-ico">{{ p.icon }}</div>
+        <h3>{{ p.title }}</h3>
+        <div class="tl">{{ p.tagline }}</div>
         <ul>
-          <li>Join the biggest sparring community in Bangalore</li>
-          <li>Live rounds against real, matched opponents</li>
-          <li>Boxing. Community. Excellence.</li>
+{%- for pt in p.points %}
+          <li>{{ pt }}</li>
+{%- endfor %}
         </ul>
       </article>
-
-      <article class="card rv tilt">
-        <div class="card-no">02</div>
-        <div class="card-ico">🏆</div>
-        <h3>Competition Boxing</h3>
-        <div class="tl">Trained To Win</div>
-        <ul>
-          <li>Expert coaching and training</li>
-          <li>Technical skill development</li>
-          <li>Competition preparation</li>
-        </ul>
-      </article>
-
-      <article class="card rv tilt">
-        <div class="card-no">03</div>
-        <div class="card-ico">🔥</div>
-        <h3>BoxFit Sessions</h3>
-        <div class="tl">Blood, Sweat &amp; Success</div>
-        <ul>
-          <li>High-intensity workouts</li>
-          <li>Improve endurance &amp; strength</li>
-          <li>Modified boxing techniques</li>
-        </ul>
-      </article>
-
-      <article class="card rv tilt">
-        <div class="card-no">04</div>
-        <div class="card-ico">🥇</div>
-        <h3>Fighters Batch</h3>
-        <div class="tl">Evening · 7–8 PM</div>
-        <ul>
-          <li>For those with boxing experience</li>
-          <li>Built for tournament competitors</li>
-          <li>Sharpen for the ring</li>
-        </ul>
-      </article>
-
-      <article class="card rv tilt">
-        <div class="card-no">05</div>
-        <div class="card-ico">🧒</div>
-        <h3>Kids Boxing</h3>
-        <div class="tl">Kids-Only · 5 PM</div>
-        <ul>
-          <li>Builds confidence, discipline &amp; focus</li>
-          <li>Develops motor skills &amp; coordination</li>
-          <li>Safe, structured environment</li>
-        </ul>
-      </article>
-
-      <article class="card rv tilt">
-        <div class="card-no">06</div>
-        <div class="card-ico">🎯</div>
-        <h3>Personal Training</h3>
-        <div class="tl">One-On-One</div>
-        <ul>
-          <li>Fully customized 1:1 sessions</li>
-          <li>Your goals: fitness, strength or technique</li>
-          <li>Personalized plan, expert guidance</li>
-        </ul>
-      </article>
-
-      <article class="card rv tilt">
-        <div class="card-no">07</div>
-        <div class="card-ico">👥</div>
-        <h3>Semi-Personal</h3>
-        <div class="tl">3:1 Ratio</div>
-        <ul>
-          <li>Small group of 3, less crowded</li>
-          <li>Near-personal attention</li>
-          <li>Personalized workout plans</li>
-        </ul>
-      </article>
-
-      <article class="card rv tilt">
-        <div class="card-no">08</div>
-        <div class="card-ico">🕐</div>
-        <h3>Flexible Training</h3>
-        <div class="tl">Your Pace</div>
-        <ul>
-          <li>Train at your own pace</li>
-          <li>Morning &amp; evening sessions</li>
-          <li>Expert guidance throughout</li>
-        </ul>
-      </article>
+{%- endfor %}
     </div>
 
     <div class="center" style="margin-top:44px">
@@ -1972,31 +1890,20 @@ window.WCB_DETAILS = {
     </div>
 
     <div class="ev-grid">
+{%- for e in events.events %}
       <article class="ev-card rv">
         <div class="ev-top">
-          <div class="ev-kind">Amateur Series</div>
-          <div class="ev-belt">🏆</div>
+          <div class="ev-kind">{{ e.kind }}</div>
+          <div class="ev-belt">{{ e.icon }}</div>
         </div>
-        <h3>Box &amp; Burn Series</h3>
-        <p>India's first amateur boxing tournament run <b>series-wise with championship belts</b>. Multiple editions already conducted — grassroots fighters earning their stripes in the ring.</p>
+        <h3>{{ e.title }}</h3>
+        <p>{{ e.desc | safe }}</p>
         <div class="ev-foot">
-          <span class="ev-status live">Box &amp; Burn 3 announced</span>
+          <span class="ev-status live">{{ e.status }}</span>
         </div>
       </article>
-
-      <article class="ev-card rv">
-        <div class="ev-top">
-          <div class="ev-kind">Professional Stage</div>
-          <div class="ev-belt">🥇</div>
-        </div>
-        <h3>Ring Side Series</h3>
-        <p>White Corner's <b>professional boxing stage</b>. Two tournaments already in the books — the platform where our fighters step up to the pro ranks.</p>
-        <div class="ev-foot">
-          <span class="ev-status live">Ring Side Series 3 announced</span>
-        </div>
-      </article>
-
-      <article class="ev-card rv reg">
+{%- endfor %}
+<article class="ev-card rv reg">
         <div class="ev-top">
           <div class="ev-kind">How To Enter</div>
           <div class="ev-belt">🎟️</div>
@@ -2101,14 +2008,9 @@ window.WCB_DETAILS = {
     </div>
 
     <div class="roster rv">
-      <div><div class="rn">Bikram</div><div class="rr">Coach</div></div>
-      <div><div class="rn">Sumantha</div><div class="rr">Coach</div></div>
-      <div><div class="rn">Priyo</div><div class="rr">Coach</div></div>
-      <div><div class="rn">S Yaiphaba</div><div class="rr">Coach</div></div>
-      <div><div class="rn">Indra Kumar</div><div class="rr">Coach</div></div>
-      <div><div class="rn">W. Lamjingba</div><div class="rr">Coach</div></div>
-      <div><div class="rn">Ls Mang</div><div class="rr">Coach</div></div>
-      <div><div class="rn">KABA</div><div class="rr">Affiliated Body</div></div>
+{%- for c in coaches.roster %}
+      <div><div class="rn">{{ c.name }}</div><div class="rr">{{ c.role }}</div></div>
+{%- endfor %}
     </div>
   </div>
 </section>
@@ -2806,10 +2708,9 @@ function impact(strong){
   const rail=$('#vRail');
   if(!rail) return;
   const V=[
-    {n:'Sourav Sushil', t:"I've been training at White Corner Boxing for a few months, and it's been an incredible experience. Coach Dipan's expertise and dedication makes a huge difference. He gives clear feedback and pushes you to improve constantly. The entire team of trainers is excellent, and the atmosphere is welcoming for all skill levels. The classes are a great mix of technique, conditioning, and sparring. Since joining, I've seen real progress in both my boxing skills and fitness."},
-    {n:'Savan RJ', t:"White Corner Boxing Academy is exceptional! The state-of-the-art facilities, skilled trainers, and focus on technical precision make it stand out. Whether you're a beginner or advanced, the tailored workouts and emphasis on form and strategy have greatly improved my skills. You never know how long a minute is until you start boxing!"},
-    {n:'Maheshwar R P', t:"I joined this gym for the love I have always had for boxing. I travel all the way from Indiranagar because of how good the place is — they always go out of the way to recognize what you lack and how to develop what you're missing. Totally love the environment because they know when and how to push a certain individual to become better. Nothing but love and respect for this academy."},
-    {n:'Nandish M', t:"The coaches are exceptionally knowledgeable, providing personalized training and feedback to help you reach your full potential. The facilities are top-notch, with all the necessary equipment and a clean, well-maintained environment. The sense of community is incredible, with members supporting and motivating each other every step of the way."}
+{%- for r in testimonials.reviews %}
+    {n:{{ r.name|dump|safe }}, t:{{ r.text|dump|safe }}}{% if not loop.last %},{% endif %}
+{%- endfor %}
   ];
   rail.innerHTML = V.map(v=>
     '<article class="v-card">'+

@@ -1,0 +1,92 @@
+{
+  "programs": [
+    {
+      "num": "01",
+      "icon": "🥊",
+      "title": "Open Sparring",
+      "tagline": "Open Sparring, Limitless Growth",
+      "points": [
+        "Join the biggest sparring community in Bangalore",
+        "Live rounds against real, matched opponents",
+        "Boxing. Community. Excellence."
+      ]
+    },
+    {
+      "num": "02",
+      "icon": "🏆",
+      "title": "Competition Boxing",
+      "tagline": "Trained To Win",
+      "points": [
+        "Expert coaching and training",
+        "Technical skill development",
+        "Competition preparation"
+      ]
+    },
+    {
+      "num": "03",
+      "icon": "🔥",
+      "title": "BoxFit Sessions",
+      "tagline": "Blood, Sweat & Success",
+      "points": [
+        "High-intensity workouts",
+        "Improve endurance & strength",
+        "Modified boxing techniques"
+      ]
+    },
+    {
+      "num": "04",
+      "icon": "🥇",
+      "title": "Fighters Batch",
+      "tagline": "Evening · 7–8 PM",
+      "points": [
+        "For those with boxing experience",
+        "Built for tournament competitors",
+        "Sharpen for the ring"
+      ]
+    },
+    {
+      "num": "05",
+      "icon": "🧒",
+      "title": "Kids Boxing",
+      "tagline": "Kids-Only · 5 PM",
+      "points": [
+        "Builds confidence, discipline & focus",
+        "Develops motor skills & coordination",
+        "Safe, structured environment"
+      ]
+    },
+    {
+      "num": "06",
+      "icon": "🎯",
+      "title": "Personal Training",
+      "tagline": "One-On-One",
+      "points": [
+        "Fully customized 1:1 sessions",
+        "Your goals: fitness, strength or technique",
+        "Personalized plan, expert guidance"
+      ]
+    },
+    {
+      "num": "07",
+      "icon": "👥",
+      "title": "Semi-Personal",
+      "tagline": "3:1 Ratio",
+      "points": [
+        "Small group of 3, less crowded",
+        "Near-personal attention",
+        "Personalized workout plans"
+      ]
+    },
+    {
+      "num": "08",
+      "icon": "🕐",
+      "title": "Flexible Training",
+      "tagline": "Your Pace",
+      "points": [
+        "Train at your own pace",
+        "Morning & evening sessions",
+        "Expert guidance throughout"
+      ]
+    }
+  ]
+}
