@@ -190,6 +190,23 @@ collections:
               - { name: name, label: "Member name", widget: string }
               - { name: text, label: "Review", widget: text }
 
+  - name: faq
+    label: "FAQ"
+    description: "The Frequently Asked Questions (the location answer updates itself from Branch Addresses)."
+    files:
+      - name: faq
+        label: "Questions & answers"
+        file: "src/_data/faq.json"
+        fields:
+          - name: faqs
+            label: "Questions"
+            label_singular: "Question"
+            widget: list
+            summary: "{{fields.question}}"
+            fields:
+              - { name: question, label: "Question", widget: string }
+              - { name: answer, label: "Answer (you can use <b>bold</b> and links)", widget: text }
+
   - name: contact
     label: "Contact & Register Link"
     description: "Your phone, email and Register-Now form link. Changing these updates them everywhere on the site."

@@ -2036,49 +2036,12 @@ window.WCB_DETAILS = {
         </div>
       </details>
 
+{%- for f in faq.faqs %}
       <details class="qa">
-        <summary><i></i>Do you offer a free trial class?</summary>
-        <div class="a">
-          Yes — <b>two free trial sessions</b>, no card and no commitment. Just gloves, a coach, and
-          the truth about how much you've got.
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSccYPQznMxHNNxLVHNszs0NP05q1-0U9q8ShkbQRaJMfDzR1g/viewform" target="_blank" rel="noopener">Register now →</a>
-          or
-          <a href="https://wa.me/919564073380?text=Hi!%20I%20am%20interested%20in%20the%20FREE%20trial%20sessions.%20Please%20share%20more%20details." target="_blank" rel="noopener">book on WhatsApp →</a>
-        </div>
+        <summary><i></i>{{ f.question }}</summary>
+        <div class="a">{{ f.answer | safe }}</div>
       </details>
-
-      <details class="qa">
-        <summary><i></i>What are your training timings?</summary>
-        <div class="a">
-          <b>Morning sessions run 6:00 AM – 10:00 AM</b> and <b>evening sessions run 5:00 PM – 10:00 PM</b>,
-          every day. The 5:00 PM evening slot is <b>kids-only</b>; adults train from 6:00 PM.
-        </div>
-      </details>
-
-      <details class="qa">
-        <summary><i></i>Do I need any boxing experience to join?</summary>
-        <div class="a">
-          None at all. We train <b>complete beginners through to competitive fighters</b>. Our coaches
-          tailor sessions to your level — as one member put it, "they always go out of the way to
-          recognise what you lack and how to develop what you're missing."
-        </div>
-      </details>
-
-      <details class="qa">
-        <summary><i></i>Do you train kids?</summary>
-        <div class="a">
-          Yes. There's a dedicated <b>kids-only session at 5:00 PM</b> every evening, coached
-          separately from the adult classes.
-        </div>
-      </details>
-
-      <details class="qa">
-        <summary><i></i>Is White Corner Boxing Academy officially affiliated?</summary>
-        <div class="a">
-          Yes — we are proudly affiliated with the <b>Karnataka Amateur Boxing Association (KABA)</b>,
-          which means our fighters can compete in sanctioned amateur boxing competitions.
-        </div>
-      </details>
+{% endfor %}
     </div>
   </div>
 </section>
