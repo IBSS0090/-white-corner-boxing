@@ -14,6 +14,24 @@ site_url: https://white-corner-boxing.netlify.app
 display_url: https://white-corner-boxing.netlify.app
 
 collections:
+  - name: blog
+    label: "Blog Posts"
+    label_singular: "Blog Post"
+    description: "Write, edit, add or remove blog articles."
+    folder: "src/blog"
+    create: true
+    delete: true
+    extension: md
+    format: frontmatter
+    slug: "{{order}}-{{slug}}"
+    sortable_fields: ["order", "title"]
+    fields:
+      - { name: title, label: "Title", widget: string }
+      - { name: tag, label: "Category tag (e.g. Technique)", widget: string }
+      - { name: teaser, label: "Short teaser (shown on the card)", widget: text }
+      - { name: order, label: "Order on the page (1 = first)", widget: number, default: 99, value_type: int }
+      - { name: body, label: "Article", widget: markdown }
+
   - name: contact
     label: "Contact & Register Link"
     description: "Your phone, email and Register-Now form link. Changing these updates them everywhere on the site."
