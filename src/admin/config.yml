@@ -68,6 +68,55 @@ collections:
                   - { name: badge, label: "Small badge text", widget: string }
                   - { name: sub, label: "Paragraph (use <b>text</b> for bold)", widget: text }
 
+  - name: pricing
+    label: "Membership Pricing"
+    description: "Edit plan names, prices and rows."
+    files:
+      - name: pricing
+        label: "Pricing plans"
+        file: "src/_data/pricing.json"
+        fields:
+          - name: plans
+            label: "Plans"
+            label_singular: "Plan"
+            widget: list
+            summary: "{{fields.name}}"
+            fields:
+              - { name: name, label: "Plan name", widget: string }
+              - { name: sub, label: "Subtitle (e.g. 18 years +)", widget: string }
+              - { name: featured, label: "Highlight this plan?", widget: boolean, default: false }
+              - { name: tag, label: "Corner label (e.g. Most Popular) — blank for none", widget: string, required: false, default: "" }
+              - name: rows
+                label: "Price rows"
+                label_singular: "Row"
+                widget: list
+                summary: "{{fields.label}} — {{fields.price}}"
+                fields:
+                  - { name: label, label: "What (e.g. 3 Months)", widget: string }
+                  - { name: price, label: "Price (e.g. ₹7,999)", widget: string }
+                  - { name: best, label: "Mark as best value?", widget: boolean, default: false }
+
+  - name: branches
+    label: "Branch Addresses"
+    description: "Names, addresses and map location for your branches (updates the map, footer and FAQ)."
+    files:
+      - name: branches
+        label: "Branches"
+        file: "src/_data/branches.json"
+        fields:
+          - name: branches
+            label: "Branches"
+            label_singular: "Branch"
+            widget: list
+            summary: "{{fields.name}}"
+            fields:
+              - { name: name, label: "Branch name", widget: string }
+              - { name: sub, label: "Tagline (e.g. Main Branch)", widget: string }
+              - { name: address, label: "Full address", widget: text }
+              - { name: mapsQuery, label: "Google Maps search text (Directions button)", widget: string }
+              - { name: lat, label: "Map latitude", widget: number, value_type: float }
+              - { name: lng, label: "Map longitude", widget: number, value_type: float }
+
   - name: contact
     label: "Contact & Register Link"
     description: "Your phone, email and Register-Now form link. Changing these updates them everywhere on the site."

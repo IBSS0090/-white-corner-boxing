@@ -1,0 +1,39 @@
+{
+  "plans": [
+    {
+      "name": "Senior",
+      "sub": "18 years +",
+      "featured": false,
+      "tag": "",
+      "rows": [
+        { "label": "3 Months", "price": "₹7,999", "best": false },
+        { "label": "6 Months", "price": "₹10,999", "best": false },
+        { "label": "12 Months", "price": "₹17,999", "best": true }
+      ]
+    },
+    {
+      "name": "Junior",
+      "sub": "Below 16 years",
+      "featured": true,
+      "tag": "Most Popular",
+      "rows": [
+        { "label": "3 Months", "price": "₹6,499", "best": false },
+        { "label": "6 Months", "price": "₹9,499", "best": false },
+        { "label": "12 Months", "price": "₹15,499", "best": true }
+      ]
+    },
+    {
+      "name": "Passes & 1-on-1",
+      "sub": "Flexible options",
+      "featured": false,
+      "tag": "",
+      "rows": [
+        { "label": "Box Pass · 20 sessions", "price": "₹4,000", "best": false },
+        { "label": "Box Pass · 40 sessions", "price": "₹7,000", "best": false },
+        { "label": "Semi-Personal · 12 sessions", "price": "₹6,000", "best": false },
+        { "label": "Personal Training", "price": "₹12,000", "best": false },
+        { "label": "Open Sparring · per session", "price": "₹300", "best": false }
+      ]
+    }
+  ]
+}

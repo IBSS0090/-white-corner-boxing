@@ -1,0 +1,28 @@
+{
+  "branches": [
+    {
+      "name": "HSR Layout",
+      "sub": "Main Branch",
+      "address": "35, 36 Dolphin Towers, Mangammanapalya Main Rd, Yellankunte, Bengaluru 560068",
+      "mapsQuery": "White Corner Boxing Academy, HSR Layout, Bengaluru 560068",
+      "lat": 12.9070833,
+      "lng": 77.6351607
+    },
+    {
+      "name": "Koramangala",
+      "sub": "Third Branch",
+      "address": "First Floor, No 11, 4th C Cross, KHB Colony, 5th Block, Koramangala Industrial Layout, Bengaluru 560095 (above Uncle Peter's Pancakes)",
+      "mapsQuery": "White Corner Boxing Academy, Koramangala, Bengaluru 560095",
+      "lat": 12.936447,
+      "lng": 77.619097
+    },
+    {
+      "name": "Indiranagar",
+      "sub": "Now Open",
+      "address": "2nd Floor, 152, 2nd Main Rd, Stage 1, Indiranagar, Bengaluru 560038",
+      "mapsQuery": "White Corner Boxing Academy, Indiranagar, Bengaluru 560038",
+      "lat": 12.9793420,
+      "lng": 77.6391534
+    }
+  ]
+}

@@ -1871,38 +1871,18 @@ window.WCB_DETAILS = {
     </div>
 
     <div class="price-grid">
-      <div class="price-card rv">
-        <div class="pc-head"><h3>Senior</h3><span>18 years +</span></div>
+{%- for plan in pricing.plans %}
+      <div class="price-card rv{% if plan.featured %} feat{% endif %}">
+        {% if plan.tag %}<div class="pc-tag">{{ plan.tag }}</div>{% endif %}
+        <div class="pc-head"><h3>{{ plan.name }}</h3><span>{{ plan.sub }}</span></div>
         <ul class="pc-rows">
-          <li><span>3 Months</span><b>₹7,999</b></li>
-          <li><span>6 Months</span><b>₹10,999</b></li>
-          <li class="best"><span>12 Months <em>Best value</em></span><b>₹17,999</b></li>
+{%- for r in plan.rows %}
+          <li{% if r.best %} class="best"{% endif %}><span>{{ r.label }}{% if r.best %} <em>Best value</em>{% endif %}</span><b>{{ r.price }}</b></li>
+{%- endfor %}
         </ul>
         <a href="#register" class="btn btn-red pc-cta"><span>Join Now</span></a>
       </div>
-
-      <div class="price-card rv feat">
-        <div class="pc-tag">Most Popular</div>
-        <div class="pc-head"><h3>Junior</h3><span>Below 16 years</span></div>
-        <ul class="pc-rows">
-          <li><span>3 Months</span><b>₹6,499</b></li>
-          <li><span>6 Months</span><b>₹9,499</b></li>
-          <li class="best"><span>12 Months <em>Best value</em></span><b>₹15,499</b></li>
-        </ul>
-        <a href="#register" class="btn btn-red pc-cta"><span>Join Now</span></a>
-      </div>
-
-      <div class="price-card rv">
-        <div class="pc-head"><h3>Passes &amp; 1-on-1</h3><span>Flexible options</span></div>
-        <ul class="pc-rows">
-          <li><span>Box Pass · 20 sessions</span><b>₹4,000</b></li>
-          <li><span>Box Pass · 40 sessions</span><b>₹7,000</b></li>
-          <li><span>Semi-Personal · 12 sessions</span><b>₹6,000</b></li>
-          <li><span>Personal Training</span><b>₹12,000</b></li>
-          <li><span>Open Sparring · per session</span><b>₹300</b></li>
-        </ul>
-        <a href="#register" class="btn btn-red pc-cta"><span>Join Now</span></a>
-      </div>
+{%- endfor %}
     </div>
 
     <p class="price-note rv">
@@ -2147,10 +2127,9 @@ window.WCB_DETAILS = {
         <summary><i></i>Where is White Corner Boxing Academy located in Bangalore?</summary>
         <div class="a">
           We have <b>three branches across Bengaluru</b>:
-          <b>HSR Layout</b> — 35, 36 Dolphin Towers, Mangammanapalya Main Road, Yellankunte, 560068;
-          <b>Indiranagar</b> — 2nd Floor, 152, 2nd Main Road, Stage 1, 560038; and
-          <b>Koramangala</b> — First Floor, No 11, 4th C Cross, KHB Colony, 5th Block,
-          Koramangala Industrial Layout, above Uncle Peter's Pancakes, 560095.
+{%- for b in branches.branches %}
+          <b>{{ b.name }}</b> — {{ b.address }}{% if not loop.last %};{% else %}.{% endif %}
+{%- endfor %}
           Message us on WhatsApp for directions to the branch nearest you.
         </div>
       </details>
@@ -2340,9 +2319,9 @@ window.WCB_DETAILS = {
 
     <div class="f-col">
       <h5>Three Branches</h5>
-      <p><b style="color:var(--bone)">HSR Layout</b><br>35, 36 Dolphin Towers, Mangammanapalya Main Rd, Yellankunte, Bengaluru 560068</p>
-      <p><b style="color:var(--bone)">Koramangala</b><br>First Floor, No 11, 4th C Cross, KHB Colony, 5th Block, Koramangala Industrial Layout, Bengaluru 560095 (above Uncle Peter's Pancakes)</p>
-      <p><b style="color:var(--bone)">Indiranagar</b><br>2nd Floor, 152, 2nd Main Rd, Stage 1, Indiranagar, Bengaluru 560038</p>
+{%- for b in branches.branches %}
+      <p><b style="color:var(--bone)">{{ b.name }}</b><br>{{ b.address }}</p>
+{%- endfor %}
       <a href="mailto:whitecornerboxing@gmail.com" data-wcb="email">whitecornerboxing@gmail.com</a>
       <a href="https://wa.me/919564073380" target="_blank" rel="noopener" data-wcb="phone">+91 95640 73380</a>
     </div>
@@ -2740,15 +2719,11 @@ function impact(strong){
   const fallback=$('#mapFallback'), track=$('#bmTrack');
 
   const BRANCHES=[
-    {name:'HSR Layout',   sub:'Main Branch',   lat:12.9070833, lng:77.6351607,
-     addr:'35, 36 Dolphin Towers, Mangammanapalya Main Rd, Yellankunte, 560068',
-     q:'White Corner Boxing Academy, HSR Layout, Bengaluru 560068'},
-    {name:'Koramangala',  sub:'Third Branch',  lat:12.936447, lng:77.619097,
-     addr:'First Floor, No 11, 4th C Cross, KHB Colony, 5th Block, Koramangala Industrial Layout, 560095 (above Uncle Peter\'s Pancakes)',
-     q:'White Corner Boxing Academy, Koramangala, Bengaluru 560095'},
-    {name:'Indiranagar',  sub:'Now Open',      lat:12.9793420, lng:77.6391534,
-     addr:'2nd Floor, 152, 2nd Main Rd, Stage 1, Indiranagar, 560038',
-     q:'White Corner Boxing Academy, Indiranagar, Bengaluru 560038'}
+{%- for b in branches.branches %}
+    {name:{{ b.name|dump|safe }}, sub:{{ b.sub|dump|safe }}, lat:{{ b.lat }}, lng:{{ b.lng }},
+     addr:{{ b.address|dump|safe }},
+     q:{{ b.mapsQuery|dump|safe }}}{% if not loop.last %},{% endif %}
+{%- endfor %}
   ];
   // directions search by the branch NAME (Google resolves the real listing) — never raw coordinates
   const gmaps = b => 'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(b.q || b.name);
