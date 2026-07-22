@@ -1,0 +1,47 @@
+backend:
+  name: github
+  repo: IBSS0090/-white-corner-boxing
+  branch: main
+  base_url: https://white-corner-boxing.netlify.app
+  auth_endpoint: /api/auth
+
+# where uploaded photos are stored / referenced
+media_folder: "src/assets"
+public_folder: "/assets"
+
+# make a commit message that reads nicely in the repo history
+site_url: https://white-corner-boxing.netlify.app
+display_url: https://white-corner-boxing.netlify.app
+
+collections:
+  - name: contact
+    label: "Contact & Register Link"
+    description: "Your phone, email and Register-Now form link. Changing these updates them everywhere on the site."
+    files:
+      - name: contact
+        label: "Contact details"
+        file: "src/_data/site.json"
+        fields:
+          - { name: phone, label: "Phone / WhatsApp number (with 91, no spaces or +)", widget: string, hint: "Example: 919564073380" }
+          - { name: email, label: "Contact email", widget: string }
+          - { name: formUrl, label: "Register Now — Google Form link", widget: string, hint: "Paste the whole https:// link" }
+
+  - name: gallery
+    label: "Photo Gallery"
+    description: "Add, remove, reorder or re-caption the gallery photos."
+    files:
+      - name: gallery
+        label: "Gallery photos"
+        file: "src/_data/gallery.json"
+        fields:
+          - name: images
+            label: "Photos"
+            label_singular: "Photo"
+            widget: list
+            summary: "{{fields.category}} — {{fields.image}}"
+            fields:
+              - { name: image, label: "Photo", widget: image }
+              - name: category
+                label: "Category"
+                widget: select
+                options: ["Sparring", "The Gym", "Equipment", "Community", "Achievements", "Coaches", "Kids", "Training", "Women"]

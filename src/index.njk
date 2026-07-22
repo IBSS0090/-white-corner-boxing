@@ -1556,14 +1556,12 @@ body.shake{animation:shk .22s}
        • Save the file, refresh the page — done.
      ===================================================================== -->
 <script>
+/* These values come from the CMS (Contact settings). Editing them in /admin
+   updates every phone number, email and Register button across the site. */
 window.WCB_DETAILS = {
-
-  phone:   "919564073380",                 // WhatsApp / call number, no +, no spaces (91 = India)
-  email:   "whitecornerboxing@gmail.com",  // contact email
-
-  // Your "Register Now" Google Form link (the whole address, keep the https://)
-  formUrl: "https://docs.google.com/forms/d/e/1FAIpQLSccYPQznMxHNNxLVHNszs0NP05q1-0U9q8ShkbQRaJMfDzR1g/viewform"
-
+  phone:   "{{ site.phone }}",
+  email:   "{{ site.email }}",
+  formUrl: "{{ site.formUrl }}"
 };
 </script>
 <!-- =====  END EDIT AREA  —  everything below is the website itself  ===== -->
@@ -3046,46 +3044,9 @@ function impact(strong){
 
   // [url, category] — every real photo from the live gallery page
   const IMGS=[
-    ["/assets/SPARRING-SESSIONS-1.png","Sparring"],
-    ["/assets/SPARRING-SESSIONS-2.png","Sparring"],
-    ["/assets/SPARRING-SESSIONS-3.png","Sparring"],
-    ["/assets/SPARRING-SESSIONS-4.png","Sparring"],
-    ["/assets/SPARRING-SESSIONS-5.png","Sparring"],
-    ["/assets/SPARRING-SESSIONS-6.png","Sparring"],
-    ["/assets/GYM-1.png","The Gym"],
-    ["/assets/GYM-2.png","The Gym"],
-    ["/assets/GYM-3.png","The Gym"],
-    ["/assets/GYM-4.png","The Gym"],
-    ["/assets/GYM-5.png","The Gym"],
-    ["/assets/GYM-6.png","The Gym"],
-    ["/assets/GYM-7.png","The Gym"],
-    ["/assets/GYM-EQUIPMENTS-1.png","Equipment"],
-    ["/assets/GYM-EQUIPMENTS-2.png","Equipment"],
-    ["/assets/GYM-EQUIPMENTS-3.png","Equipment"],
-    ["/assets/GYM-EQUIPMENTS-4.png","Equipment"],
-    ["/assets/GYM-EQUIPMENTS-5.png","Equipment"],
-    ["/assets/GYM-EQUIPMENTS-6.png","Equipment"],
-    ["/assets/GYM-EQUIPMENTS-7.png","Equipment"],
-    ["/assets/COMMUNITIES-1.png","Community"],
-    ["/assets/COMMUNITIES-2.png","Community"],
-    ["/assets/COMMUNITIES-3.png","Community"],
-    ["/assets/COMMUNITIES-4.png","Community"],
-    ["/assets/COMMUNITIES-5.png","Community"],
-    ["/assets/COMMUNITIES-6.png","Community"],
-    ["/assets/COMMUNITIES-7.png","Community"],
-    ["/assets/ACHIEVEMENTS-1.png","Achievements"],
-    ["/assets/ACHIEVEMENTS-2.png","Achievements"],
-    ["/assets/ACHIEVEMENTS-3.png","Achievements"],
-    ["/assets/ACHIEVEMENTS-4.png","Achievements"],
-    ["/assets/ACHIEVEMENTS-5.png","Achievements"],
-    ["/assets/Dipan-1.png","Coaches"],
-    ["/assets/Coach-2.png","Coaches"],
-    ["/assets/Coach-3.png","Coaches"],
-    ["/assets/kids-boxing.png","Kids"],
-    ["/assets/kids.png","Kids"],
-    ["/assets/g1.png","Training"],
-    ["/assets/g2.png","Training"],
-    ["/assets/women-on-boxing-training.jpg","Women"]
+{%- for g in gallery.images %}
+    ["{{ g.image }}","{{ g.category }}"]{% if not loop.last %},{% endif %}
+{%- endfor %}
   ];
   const PREVIEW = 8;                 // shown before "View Full Gallery"
   let filter = 'All', expanded = false;
